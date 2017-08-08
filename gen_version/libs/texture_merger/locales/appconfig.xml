@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<appconfig>
+	<!-- 列表配置-->
+	<texturelist useextension="false"/>
+	<!-- 合图配置-->
+	<texturemerge gap="1"  sizemode="2n" />
+	<!-- 导出配置 -->
+	<export scale="1"/>
+</appconfig>

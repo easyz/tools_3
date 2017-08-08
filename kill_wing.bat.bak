@@ -1,0 +1,3 @@
+@taskkill /im EgretWing.exe /f
+start /d "C:\Program Files (x86)\Egret\Egret Wing 3\" EgretWing.exe
+exit

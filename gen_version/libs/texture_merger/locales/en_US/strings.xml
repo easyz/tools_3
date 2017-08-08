@@ -1,0 +1,140 @@
+<keys>
+  <item key="Alert.Confirm" value="OK"/>
+  <item key="Alert.Cancel" value="Cancel"/>
+  <item key="Alert.Yes" value="Yes"/>
+  <item key="Alert.No" value="No"/>
+  <item key="ItemDataCreaterForAnimate.SameFile" value="存在同名文件"/>
+  <item key="ItemDataCreaterForAnimate.ParseGif" value="正在解析Gif..."/>
+  <item key="ItemDataCreaterForAnimate.ParseSwf" value="正在解析SWF..."/>
+  <item key="ItemDataCreaterForConfig.LoadProject" value="正在加载项目文件..."/>
+  <item key="ItemDataCreaterForConfig.FileNotExist" value="部分引用的图片文件可能不存在"/>
+  <item key="ItemDataCreaterForJson.FormatError" value="json文件格式错误"/>
+  <item key="ItemDataCreaterForJson.FileNotExist" value="{0}对应的纹理图片未找到"/>
+  <item key="ItemDataCreaterForTextrueFile.LoadTexture" value="纹理加载"/>
+  <item key="FontTextureEditor.Rename" value="重命名"/>
+  <item key="ListEditor.Title" value="列表配置"/>
+  <item key="ListEditor.AppendExtension" value="附加拓展名"/>
+  <item key="ProEditor.Title" value="纹理配置"/>
+  <item key="ProEditor.Layout" value="布局"/>
+  <item key="ProEditor.Canvas" value="画布"/>
+  <item key="ProEditor.Gap" value="间隙"/>
+  <item key="ProEditor.CutImage" value="切除透明边界"/>
+  <item key="BoardForEditMode.Title" value="选择编辑类型 "/>
+  <item key="BoardForFontEdit.Menu1" value="系统字体"/>
+  <item key="BoardForFontEdit.Menu2" value="字体纹理集"/>
+  <item key="BoardForFontEdit.Commit" value="确认"/>
+  <item key="BoardForFontEdit.FontSize" value="  字体大小:"/>
+  <item key="BoardForFontEdit.FontColor" value="  字体颜色:"/>
+  <item key="BoardForFontEdit.FontBold" value="  粗体:"/>
+  <item key="BoardForFontEdit.SelectFile" value=" 选择文件"/>
+  <item key="BoardForFontEdit.FillTextTip" value=" 填写字符文本（顺序：由上至下，由左至右）"/>
+  <item key="BoardForFontEdit.SameFile" value=" 存在相同名称，已重命名"/>
+  <item key="InfoBar.ScaleView" value="视图缩放"/>
+  <item key="InfoBar.Teach" value="查看使用教程"/>
+  <item key="InfoBar.TextureSize" value="纹理大小"/>
+  <item key="SourceList.MenuItem1" value="删除"/>
+  <item key="SourceList.Delete.Content" value="确定要删除选定项吗?"/>
+  <item key="SourceList.Delete.Title" value="提示"/>
+  <item key="SourceList.Delete.OK" value="确定"/>
+  <item key="SourceList.Delete.Cancle" value="取消"/>
+  <item key="SourceList.Sort" value="排序"/>
+  <item key="SystemMenu.Open.Texture" value="请选择资源"/>
+  <item key="SystemMenu.Open.Animate" value="选择动画资源"/>
+  <item key="SystemMenu.Open.FontTexture" value="请选择字符纹理"/>
+  <item key="SystemMenu.Open.Project" value="打开项目文件"/>
+  <item key="SystemMenu.NoTexture.Title" value="提示"/>
+  <item key="SystemMenu.NoTexture.Content" value="未添加任何纹理"/>
+  <item key="SystemMenu.Save" value="保存"/>
+  <item key="SystemMenu.Saveing" value="正在保存..."/>
+  <item key="SystemMenu.Exporting" value="正在导出..."/>
+  <item key="ViewBox.Drag.Texture" value="拖拽文件到这里"/>
+  <item key="ViewBox.Drag.Animate" value="拖拽文件到这里"/>
+  <item key="ViewBox.Drag.Font" value="拖拽纹理文件到这里"/>
+  <item key="GlobalMenuData.New" value="新建"/>
+  <item key="GlobalMenuData.Export" value="导出"/>
+  <item key="GlobalMenuData.Texture.OpenProject" value="打开项目"/>
+  <item key="GlobalMenuData.Texture.SaveProject" value="保存项目"/>
+  <item key="GlobalMenuData.Texture.AddTexture" value="添加纹理"/>
+  <item key="GlobalMenuData.Animate.newAnimate" value="新建动画"/>
+  <item key="GlobalMenuData.Animate.AddAnimate" value="添加动画"/>
+  <item key="GlobalMenuData.Font.AddChar" value="添加字符"/>
+  <item key="GlobalMenuData.Font.AddChar.ToolTip" value="可将单个字符的纹理图片导入"/>
+  <item key="GlobalMenuData.Font.MoreChar" value="更多字符"/>
+  <item key="AnimatePrivewWindow.priview" value="动作预览"/>
+  <item key="AnimatePrivewWindow.framerate" value="帧率:{0}"/>
+  <item key="AnimatePrivewWindow.play" value="播放"/>
+  <item key="AnimatePrivewWindow.stop" value="停止播放"/>
+  <item key="ContextMenuWorkerForAnimate.edit" value="编辑"/>
+  <item key="ContextMenuWorkerForAnimate.delete" value="删除"/>
+  <item key="ContextMenuWorkerForAnimate.newaction" value="新建动作"/>
+  <item key="ContextMenuWorkerForAnimate.preview" value="预览"/>
+  <item key="ContextMenuWorkerForAnimate.addframe" value="插入序列帧"/>
+  <item key="ActionCreateWindow.title" value="创建动作"/>
+  <item key="AnimateCreateWindow.title" value="创建动画"/>
+  <item key="AnimateCreateWindow.framerate" value="帧率:"/>
+  <item key="CreateWindow.name" value="名称:"/>
+  <item key="CreateWindow.ok" value="确定"/>
+  <item key="ColorWindow.Title" value="Color Selector"/>
+  <item key="ColorWindow.SelectColor" value="Select Color:"/>
+  <item key="ColorWindow.NewColor" value="New:"/>
+  <item key="ColorWindow.CurrentColor" value="Current:"/>
+  <item key="ColorWindow.UseDefault" value="Default Value"/>
+  <item key="ColorWindow.Restore" value="Restore"/>
+  <item key="CloseTabButtonSkin.CloseButton.ToolTip" value="Close"/>
+  <item key="AlertWindowSkin.ButtonOne" value="Yes"/>
+  <item key="AlertWindowSkin.ButtonTwo" value="No"/>
+  <item key="AlertWindowSkin.ButtonThree" value="Cancel"/>
+  <item key="FileUtil.Browse" value="Browse Files"/>
+  <item key="FileUtil.Save" value="Save Files"/>
+  <item key="StatuBar.EditArea" value="Edit Area"/>
+  <item key="StatuBar.Restore" value="Restore"/>
+  <item key="TabGroup.MenuButton" value="Tab Group"/>
+  <item key="TabGroup.Close" value="Close"/>
+  <item key="TabGroup.Minimum" value="Minimum"/>
+  <item key="TabGroup.CloseTab" value="Close Tab Group"/>
+  <item key="CloseTabButton.Close" value="Close"/>
+  <item key="CloseTabButton.CloseOther" value="Close Others"/>
+  <item key="CloseTabButton.CloseAll" value="Close All"/>
+  <item key="LoginWindow.Title" value="Log in"/>
+  <item key="LoginWindow.Email" value="Egret ID:"/>
+  <item key="LoginWindow.Passwrod" value="Password:"/>
+  <item key="LoginWindow.Login" value="Log in"/>
+  <item key="LoginWindow.Register" value="Register"/>
+  <item key="LoginWindow.Loading" value="Logging in..."/>
+  <item key="LoginWindow.ErrorNoUser" value="User does not exist"/>
+  <item key="LoginWindow.ErrorPassword" value="Wrong password"/>
+  <item key="LoginWindow.ErrorLogin" value="Login failed"/>
+  <item key="LoginWindow.ErrorEmail" value="Please log in with the email address your BBS account is using."/>
+  <item key="LoginWindow.ErrorBadNet" value="Network connection error"/>
+  <item key="LoginWindow.CloseContent" value="Egret Wing will close if this window is closed.Still close the window"/>
+  <item key="LoginWindow.CloseTitle" value="Close Tips"/>
+  <item key="LoginWindow.AlertErrorTitle" value="Login Tips"/>
+  <item key="LoginWindow.AlertLoading" value="Trying to log in..."/>
+  <item key="LoginWindow.AlertErrorContent" value="Your account has be logged in. Please change your password if it is not your action. \n\n Egret Wing will close if this window is closed."/>
+  <item key="LoginWindow.ReLogin" value="Relogin"/>
+  <item key="LoginWindow.ChangePassword" value="Reset password"/>
+  <item key="LoginWindow.RemeberPassword" value="Remember password"/>
+  <item key="LoginWindow.FindPassword" value="Retrieve password"/>
+  <item key="LoginWindow.NoQualification" value="This account is not qualified for an internal test version"/>
+  <item key="LoginWindow.PromptApplyContent" value="Your account is not qualified for an internal test version."/>
+  <item key="LoginWindow.PromptApplyTitle" value="Login Tips"/>
+  <item key="LoginWindow.EgretIDPrompt" value="Your Email"/>
+  <item key="LoginWindow.Apply" value="Apply for internal test version"/>
+  <item key="AboutWindow.Title" value="About {0}"/>
+  <item key="AboutWindow.Version" value="Version: {0}"/>
+  <item key="AboutWindow.TechGroup" value="Technical Support"/>
+  <item key="AboutWindow.ContactGroup" value="Contact us"/>
+  <item key="AboutWindow.BusinessGroup" value="Business Cooperation"/>
+  <item key="AboutWindow.PromiseGroup" value="Egret's Promise"/>
+  <item key="AboutWindow.BBS" value="BBS: {0}"/>
+  <item key="AboutWindow.SupportMail" value="Email: {0}"/>
+  <item key="AboutWindow.DeveloperQQ" value="DragonBones QQ Group: {0}"/>
+  <item key="AboutWindow.Telephone" value="Tel: {0}"/>
+  <item key="AboutWindow.Website" value="Website: {0}"/>
+  <item key="AboutWindow.Address" value="Addr.: {0}"/>
+  <item key="AboutWindow.BusinessMail" value="Email: {0}"/>
+  <item key="AboutWindow.ProductQQ" value="Product Cooperation QQ：{0}"/>
+  <item key="AboutWindow.ChannelQQ" value="Channel Cooperation QQ：{0}"/>
+  <item key="AboutWindow.Twitter" value="Twitter: {0}"/>
+  <item key="AboutWindow.Facebook" value="Facebook: {0}"/>
+</keys>

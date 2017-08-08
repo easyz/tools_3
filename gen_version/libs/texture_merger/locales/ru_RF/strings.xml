@@ -1,0 +1,65 @@
+<keys>
+  <item key="ColorWindow.Title" value="Выбор цвета"/>
+  <item key="ColorWindow.SelectColor" value="Выберите цвет:"/>
+  <item key="ColorWindow.NewColor" value="Новый:"/>
+  <item key="ColorWindow.CurrentColor" value="Текущий:"/>
+  <item key="ColorWindow.UseDefault" value="Использовать цвет по умолчанию"/>
+  <item key="ColorWindow.Restore" value="Сброс"/>
+  <item key="CloseTabButtonSkin.CloseButton.ToolTip" value="Закрыть"/>
+  <item key="AlertWindowSkin.ButtonOne" value="Да"/>
+  <item key="AlertWindowSkin.ButtonTwo" value="Нет"/>
+  <item key="AlertWindowSkin.ButtonThree" value="Отмена"/>
+  <item key="FileUtil.Browse" value="Просмотр файлов"/>
+  <item key="FileUtil.Save" value="Сохранить файлы"/>
+  <item key="StatuBar.EditArea" value="Редактировать"/>
+  <item key="StatuBar.Restore" value="Продолжить"/>
+  <item key="TabGroup.MenuButton" value="Вкладка Группа"/>
+  <item key="TabGroup.Close" value="Закрыть"/>
+  <item key="TabGroup.Minimum" value="Минимизировать"/>
+  <item key="TabGroup.CloseTab" value="Закрыть вкладку группы"/>
+  <item key="CloseTabButton.Close" value="Закрыть"/>
+  <item key="CloseTabButton.CloseOther" value="Закрыть другие вкладки"/>
+  <item key="CloseTabButton.CloseAll" value="Закрыть все"/>
+  <item key="LoginWindow.Title" value="Авторизоваться"/>
+  <item key="LoginWindow.Email" value="Egret ID:"/>
+  <item key="LoginWindow.Passwrod" value="Пароль:"/>
+  <item key="LoginWindow.Login" value="Авторизоваться"/>
+  <item key="LoginWindow.Register" value="Регистрация"/>
+  <item key="LoginWindow.Loading" value="Вход в систему..."/>
+  <item key="LoginWindow.ErrorNoUser" value="Пользователь не существует"/>
+  <item key="LoginWindow.ErrorPassword" value="Неправильный пароль"/>
+  <item key="LoginWindow.ErrorLogin" value="Ошибка входа"/>
+  <item key="LoginWindow.ErrorEmail" value="Пожалуйста, войдите с адресом электронной почты от вашего BBS аккаунта."/>
+  <item key="LoginWindow.ErrorBadNet" value="Ошибка подключения к сети"/>
+  <item key="LoginWindow.CloseContent" value="Egret закроется, если закрыть это окно. Всё же закрыть окно?"/>
+  <item key="LoginWindow.CloseTitle" value="Закрыть советы"/>
+  <item key="LoginWindow.AlertErrorTitle" value="Login Tips"/>
+  <item key="LoginWindow.AlertLoading" value="Пытаемся войти ..."/>
+  <item key="LoginWindow.AlertErrorContent" value="Вы вошли в вашу учётную запись. Пожалуйста, измените пароль, если вы этого не делали. Egret закроется, если закрыть это окно."/>
+  <item key="LoginWindow.ReLogin" value="Войти снова"/>
+  <item key="LoginWindow.ChangePassword" value="Сброс пароля"/>
+  <item key="LoginWindow.RemeberPassword" value="Запомнить пароль"/>
+  <item key="LoginWindow.FindPassword" value="Восстановить пароль"/>
+  <item key="LoginWindow.NoQualification" value="Эта учетная запись не имеет прав, для внутренней тестовой версии"/>
+  <item key="LoginWindow.PromptApplyContent" value="Ваша учетная запись не имеет права, для внутренней тестовой версии."/>
+  <item key="LoginWindow.PromptApplyTitle" value="Вход советы"/>
+  <item key="LoginWindow.EgretIDPrompt" value="Ваш Email"/>
+  <item key="LoginWindow.Apply" value="Применить для внутренней тестовой версии"/>
+  <item key="AboutWindow.Title" value="О {0}"/>
+  <item key="AboutWindow.Version" value="Версия: {0}"/>
+  <item key="AboutWindow.TechGroup" value="Техническая поддержка"/>
+  <item key="AboutWindow.ContactGroup" value="Свяжитесь с нами"/>
+  <item key="AboutWindow.BusinessGroup" value="Деловое сотрудничество"/>
+  <item key="AboutWindow.PromiseGroup" value="Egret обещает"/>
+  <item key="AboutWindow.BBS" value="BBS: {0}"/>
+  <item key="AboutWindow.SupportMail" value="Email: {0}"/>
+  <item key="AboutWindow.DeveloperQQ" value="DragonBones QQ Группа: {0}"/>
+  <item key="AboutWindow.Telephone" value="Тел: {0}"/>
+  <item key="AboutWindow.Website" value="Веб-сайт: {0}"/>
+  <item key="AboutWindow.Address" value="Адрес: {0}"/>
+  <item key="AboutWindow.BusinessMail" value="Email: {0}"/>
+  <item key="AboutWindow.ProductQQ" value="Сотрудничество по товарам QQ: {0}"/>
+  <item key="AboutWindow.ChannelQQ" value="Канал сотрудничества QQ: {0}"/>
+  <item key="AboutWindow.Twitter" value="Twitter: {0}"/>
+  <item key="AboutWindow.Facebook" value="Facebook: {0}"/>
+</keys>

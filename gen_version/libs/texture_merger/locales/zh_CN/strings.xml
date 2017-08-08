@@ -1,0 +1,140 @@
+<keys>
+  <item key="Alert.Confirm" value="确定"/>
+  <item key="Alert.Cancel" value="取消"/>
+  <item key="Alert.Yes" value="是"/>
+  <item key="Alert.No" value="否"/>
+  <item key="ItemDataCreaterForAnimate.SameFile" value="存在同名文件"/>
+  <item key="ItemDataCreaterForAnimate.ParseGif" value="正在解析Gif..."/>
+  <item key="ItemDataCreaterForAnimate.ParseSwf" value="正在解析SWF..."/>
+  <item key="ItemDataCreaterForConfig.LoadProject" value="正在加载项目文件..."/>
+  <item key="ItemDataCreaterForConfig.FileNotExist" value="部分引用的图片文件可能不存在"/>
+  <item key="ItemDataCreaterForJson.FormatError" value="json文件格式错误"/>
+  <item key="ItemDataCreaterForJson.FileNotExist" value="{0}对应的纹理图片未找到"/>
+  <item key="ItemDataCreaterForTextrueFile.LoadTexture" value="纹理加载"/>
+  <item key="FontTextureEditor.Rename" value="重命名"/>
+  <item key="ListEditor.Title" value="列表配置"/>
+  <item key="ListEditor.AppendExtension" value="附加拓展名"/>
+  <item key="ProEditor.Title" value="纹理配置"/>
+  <item key="ProEditor.Layout" value="布局"/>
+  <item key="ProEditor.Canvas" value="画布"/>
+  <item key="ProEditor.Gap" value="间隙"/>
+  <item key="ProEditor.CutImage" value="切除透明边界"/>
+  <item key="BoardForEditMode.Title" value="选择编辑类型 "/>
+  <item key="BoardForFontEdit.Menu1" value="系统字体"/>
+  <item key="BoardForFontEdit.Menu2" value="字体纹理集"/>
+  <item key="BoardForFontEdit.Commit" value="确认"/>
+  <item key="BoardForFontEdit.FontSize" value="  字体大小:"/>
+  <item key="BoardForFontEdit.FontColor" value="  字体颜色:"/>
+  <item key="BoardForFontEdit.FontBold" value="  粗体:"/>
+  <item key="BoardForFontEdit.SelectFile" value=" 选择文件"/>
+  <item key="BoardForFontEdit.FillTextTip" value=" 填写字符文本（顺序：由上至下，由左至右）"/>
+  <item key="BoardForFontEdit.SameFile" value=" 存在相同名称，已重命名"/>
+  <item key="InfoBar.ScaleView" value="视图缩放"/>
+  <item key="InfoBar.Teach" value="查看使用教程"/>
+  <item key="InfoBar.TextureSize" value="纹理大小"/>
+  <item key="SourceList.MenuItem1" value="删除"/>
+  <item key="SourceList.Delete.Content" value="确定要删除选定项吗?"/>
+  <item key="SourceList.Delete.Title" value="提示"/>
+  <item key="SourceList.Delete.OK" value="确定"/>
+  <item key="SourceList.Delete.Cancle" value="取消"/>
+  <item key="SourceList.Sort" value="排序"/>
+  <item key="SystemMenu.Open.Texture" value="请选择资源"/>
+  <item key="SystemMenu.Open.Animate" value="选择动画资源"/>
+  <item key="SystemMenu.Open.FontTexture" value="请选择字符纹理"/>
+  <item key="SystemMenu.Open.Project" value="打开项目文件"/>
+  <item key="SystemMenu.NoTexture.Title" value="提示"/>
+  <item key="SystemMenu.NoTexture.Content" value="未添加任何纹理"/>
+  <item key="SystemMenu.Save" value="保存"/>
+  <item key="SystemMenu.Saveing" value="正在保存..."/>
+  <item key="SystemMenu.Exporting" value="正在导出..."/>
+  <item key="ViewBox.Drag.Texture" value="拖拽文件到这里"/>
+  <item key="ViewBox.Drag.Animate" value="拖拽文件到这里"/>
+  <item key="ViewBox.Drag.Font" value="拖拽纹理文件到这里"/>
+  <item key="GlobalMenuData.New" value="新建"/>
+  <item key="GlobalMenuData.Export" value="导出"/>
+  <item key="GlobalMenuData.Texture.OpenProject" value="打开项目"/>
+  <item key="GlobalMenuData.Texture.SaveProject" value="保存项目"/>
+  <item key="GlobalMenuData.Texture.AddTexture" value="添加纹理"/>
+  <item key="GlobalMenuData.Animate.newAnimate" value="新建动画"/>
+  <item key="GlobalMenuData.Animate.AddAnimate" value="添加动画"/>
+  <item key="GlobalMenuData.Font.AddChar" value="添加字符"/>
+  <item key="GlobalMenuData.Font.AddChar.ToolTip" value="可将单个字符的纹理图片导入"/>
+  <item key="GlobalMenuData.Font.MoreChar" value="更多字符"/>
+  <item key="AnimatePrivewWindow.priview" value="动作预览"/>
+  <item key="AnimatePrivewWindow.framerate" value="帧率:{0}"/>
+  <item key="AnimatePrivewWindow.play" value="播放"/>
+  <item key="AnimatePrivewWindow.stop" value="停止播放"/>
+  <item key="ContextMenuWorkerForAnimate.edit" value="编辑"/>
+  <item key="ContextMenuWorkerForAnimate.delete" value="删除"/>
+  <item key="ContextMenuWorkerForAnimate.newaction" value="新建动作"/>
+  <item key="ContextMenuWorkerForAnimate.preview" value="预览"/>
+  <item key="ContextMenuWorkerForAnimate.addframe" value="插入序列帧"/>
+  <item key="ActionCreateWindow.title" value="创建动作"/>
+  <item key="AnimateCreateWindow.title" value="创建动画"/>
+  <item key="AnimateCreateWindow.framerate" value="帧率:"/>
+  <item key="CreateWindow.name" value="名称:"/>
+  <item key="CreateWindow.ok" value="确定"/>
+  <item key="ColorWindow.Title" value="颜色选择器"/>
+  <item key="ColorWindow.SelectColor" value="选择颜色:"/>
+  <item key="ColorWindow.NewColor" value="新的:"/>
+  <item key="ColorWindow.CurrentColor" value="当前:"/>
+  <item key="ColorWindow.UseDefault" value="使用默认值"/>
+  <item key="ColorWindow.Restore" value="还原 "/>
+  <item key="CloseTabButtonSkin.CloseButton.ToolTip" value="关闭"/>
+  <item key="AlertWindowSkin.ButtonOne" value="是"/>
+  <item key="AlertWindowSkin.ButtonTwo" value="否"/>
+  <item key="AlertWindowSkin.ButtonThree" value="取消"/>
+  <item key="FileUtil.Browse" value="浏览文件"/>
+  <item key="FileUtil.Save" value="保存文件"/>
+  <item key="StatuBar.EditArea" value="编辑区"/>
+  <item key="StatuBar.Restore" value="复原"/>
+  <item key="TabGroup.MenuButton" value="选项卡菜单"/>
+  <item key="TabGroup.Close" value="关闭"/>
+  <item key="TabGroup.Minimum" value="最小化"/>
+  <item key="TabGroup.CloseTab" value="关闭选项卡组"/>
+  <item key="CloseTabButton.Close" value="关闭"/>
+  <item key="CloseTabButton.CloseOther" value="关闭其他"/>
+  <item key="CloseTabButton.CloseAll" value="关闭全部"/>
+  <item key="LoginWindow.Title" value="登录"/>
+  <item key="LoginWindow.Email" value="Egret ID:"/>
+  <item key="LoginWindow.Passwrod" value="密码:"/>
+  <item key="LoginWindow.Login" value="登录"/>
+  <item key="LoginWindow.Register" value="注册"/>
+  <item key="LoginWindow.Loading" value="登录中..."/>
+  <item key="LoginWindow.ErrorNoUser" value="用户不存在"/>
+  <item key="LoginWindow.ErrorPassword" value="密码错误"/>
+  <item key="LoginWindow.ErrorLogin" value="登录失败"/>
+  <item key="LoginWindow.ErrorEmail" value="请使用论坛账号对应的邮箱登录"/>
+  <item key="LoginWindow.ErrorBadNet" value="网络连接错误"/>
+  <item key="LoginWindow.CloseContent" value="关闭本窗体将会关闭Egret Wing，是否继续？"/>
+  <item key="LoginWindow.CloseTitle" value="关闭提示"/>
+  <item key="LoginWindow.AlertErrorTitle" value="登录提示"/>
+  <item key="LoginWindow.AlertLoading" value="正在尝试登录..."/>
+  <item key="LoginWindow.AlertErrorContent" value="您的账号已在其他地点登录，如非本人操作，请修改密码。\n\n关闭本窗体将关闭Egret Wing。"/>
+  <item key="LoginWindow.ReLogin" value="重新登录"/>
+  <item key="LoginWindow.ChangePassword" value="修改密码"/>
+  <item key="LoginWindow.RemeberPassword" value="记住密码"/>
+  <item key="LoginWindow.FindPassword" value="找回密码"/>
+  <item key="LoginWindow.NoQualification" value="该账号没有内测资格"/>
+  <item key="LoginWindow.PromptApplyContent" value="您的账号尚未获得内测资格，暂时无法试用。"/>
+  <item key="LoginWindow.PromptApplyTitle" value="登录提示"/>
+  <item key="LoginWindow.EgretIDPrompt" value="您登陆论坛对应的邮箱"/>
+  <item key="LoginWindow.Apply" value="申请内测"/>
+  <item key="AboutWindow.Title" value="关于 {0}"/>
+  <item key="AboutWindow.Version" value="版本：{0}"/>
+  <item key="AboutWindow.TechGroup" value="技术支持"/>
+  <item key="AboutWindow.ContactGroup" value="联系我们"/>
+  <item key="AboutWindow.BusinessGroup" value="业务合作"/>
+  <item key="AboutWindow.PromiseGroup" value="Egret 服务承诺"/>
+  <item key="AboutWindow.BBS" value="BBS交流区：{0}"/>
+  <item key="AboutWindow.SupportMail" value="技术支持邮箱：{0}"/>
+  <item key="AboutWindow.DeveloperQQ" value="DragonBones官方QQ群：{0}"/>
+  <item key="AboutWindow.Telephone" value="电话：{0}"/>
+  <item key="AboutWindow.Website" value="网址：{0}"/>
+  <item key="AboutWindow.Address" value="地址：{0}"/>
+  <item key="AboutWindow.BusinessMail" value="商务合作：{0}"/>
+  <item key="AboutWindow.ProductQQ" value="产品合作 QQ：{0}"/>
+  <item key="AboutWindow.ChannelQQ" value="渠道合作 QQ：{0}"/>
+  <item key="AboutWindow.Twitter" value="Twitter: {0}"/>
+  <item key="AboutWindow.Facebook" value="Facebook: {0}"/>
+</keys>
