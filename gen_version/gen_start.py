@@ -28,7 +28,7 @@ def Start(outDir, projectDir, version, root):
     STEP07 = "新版本文件"
 
     step = [
-        STEP00,
+        # STEP00,
 
         # STEP01,
 
@@ -68,6 +68,9 @@ def Start(outDir, projectDir, version, root):
         print("===> STEP01")
         copyPath = [
             "resource\\cfg",
+
+            "resource\\assets\\image\\img",
+
             # "resource\\assets\\atlas_ui",
 
             # "resource\\assets\\map",
@@ -95,8 +98,7 @@ def Start(outDir, projectDir, version, root):
     if index(STEP03_01):
         print("===> STEP03_01")
         compressPath = [
-            # "resource\\assets\\image\\item_single",
-            "resource\\assets\\image\\role_show",
+            "resource\\assets\\image\\item_single",
         ]
         for path in compressPath:
             com.Compress(projectDir, path, outDir)

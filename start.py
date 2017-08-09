@@ -1,8 +1,8 @@
 # coding:utf8
 
 outDir = "F:\\game\\release"
-projectDir = "E:\\lycq_trunk\\client\\project"
-# projectDir = "E:\\lycq\\client\\project"
+# projectDir = "E:\\lycq_trunk\\client\\project"
+projectDir = "E:\\lycq\\client\\project"
 
 
 # outDir = "F:\\ios_test"
