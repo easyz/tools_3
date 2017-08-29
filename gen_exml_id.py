@@ -7,11 +7,26 @@ import sys
 
 # print(sys.argv)
 
-if len(sys.argv) != 2:
+if len(sys.argv) < 2:
 	raw_input("not exml file, exit!!!")
 	exit()
 
+filePath = ""
+condition = ""
+
+isPublic = False
 filePath = sys.argv[1]
+
+if len(sys.argv) == 3:
+	condition = sys.argv[2]
+	if condition[0] != "-":
+		print("arg error => " + condition)
+		exit()
+	isPublic = condition.find('p') != -1
+
+# print("isPublic => " + str(isPublic))
+# print(filePath)
+# exit()
 
 if not os.path.exists(filePath):
 	raw_input("not found file => " + filePath)
@@ -60,13 +75,15 @@ except Exception, e:
 
 idContent = []
 
+fieldPrefix = isPublic and "public" or "protected"
+
 def AddId(node):
 	attrib = node.attrib
 	if attrib.has_key("id"):
 		nodeId = attrib["id"] 
 		nodeType = GetType(node.tag)
 		if nodeType:
-			field = tab +"private %s: %s" % (nodeId, nodeType)
+			field = tab +"%s %s: %s" % (fieldPrefix, nodeId, nodeType)
 			# print("find node => " + field)
 			idContent.append(field)
 

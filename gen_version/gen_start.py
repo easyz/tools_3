@@ -30,7 +30,7 @@ def Start(outDir, projectDir, version, root):
     step = [
         # STEP00,
 
-        # STEP01,
+        STEP01,
 
         # STEP02,
         # STEP02_02,
@@ -69,13 +69,13 @@ def Start(outDir, projectDir, version, root):
         copyPath = [
             "resource\\cfg",
 
-            "resource\\assets\\image\\img",
+            # "resource\\assets\\image\\img",
+            # "resource\\assets\\image\\other",
 
             # "resource\\assets\\atlas_ui",
 
             # "resource\\assets\\map",
 
-            # "resource\\assets\\image\\other",
             # "resource\\assets\\movie\\blood",
             # "resource\\image\\public",
         ]
@@ -106,14 +106,14 @@ def Start(outDir, projectDir, version, root):
     if index(STEP03_02):
         print("===> STEP03_02")
         compressPath2 = [
-            # "resource\\assets\\atlas_font",
+            "resource\\assets\\atlas_font",
 
-            # "resource\\assets\\movie\\body",
-            # "resource\\assets\\movie\\monster",
+            "resource\\assets\\movie\\body",
+            "resource\\assets\\movie\\monster",
             # "resource\\assets\\movie\\skillEff",
             "resource\\assets\\movie\\uiEffe",
-            # "resource\\assets\\movie\\weapon",
-            # "resource\\assets\\movie\\wing",
+            "resource\\assets\\movie\\weapon",
+            "resource\\assets\\movie\\wing",
 
             # "resource\\assets\\movie\\eff",
             # "resource\\assets\\movie\\warspirit",
