@@ -6,6 +6,10 @@ import hashlib
 import sys
 import math
 import shutil
+import com.Util as Util
+
+sys.path.append(os.path.dirname(__file__) + "/../")
+from configy import *
 
 def GetMaxVersion(outDir):
     maxVersion = 0
@@ -59,16 +63,22 @@ allMD5Dict = {}
 md5FileCount = 0
 MAP_DIR = "resource/assets/map"
 
+# VER_NAME = GAME_ID + "ver"
+VER_NAME = "ver"
+BASE_VER_KEY_NAME = "__base_ver__"
+
 def GetCodeFileName(v):
-	return "ver"+str(v)+".json"
+	return VER_NAME+str(v)+".json"
 
 def GenMaxCodeFile(root):
+	if not os.path.exists(root):
+		return 0
 	verList = []
 	for filename in os.listdir(root):
-		if filename.startswith("ver") and filename.endswith(".json"):
+		if filename.startswith(VER_NAME) and filename.endswith(".json"):
 			code = -1
 			try:
-				code = int(filename.replace("ver", "").replace(".json", ""))
+				code = int(filename.replace(VER_NAME, "").replace(".json", ""))
 			except:
 				pass
 			if code != -1:
@@ -213,10 +223,11 @@ def GenVersionCodeFile(root, version):
 		for key in lhsMd5:
 			codeV = lhsVersion
 			# 如果新文件配置里面存在当前文件，并且版本号比遍历到文件号码较大，则不需要比较改文件
-			if newDict.get(key) != None and newDict.get(key) >= codeV:
+			# if newDict.get(key) != None and newDict.get(key) >= codeV:
+			if newDict.get(key) != None:
 				continue
-			# if key == "resource/assets/movie/monster/monster10028_3r.png":
-			# 	print("=============================" + str(codeV))
+			# if key == "resource/assets/atlas2_ui/cm/cm.png":
+			# 	print("=============================1111" + str(codeV))
 			# 向下查找最小的版本号
 			tempmd5 = None
 			for j in range(i, len(versionMd5)):
@@ -230,9 +241,13 @@ def GenVersionCodeFile(root, version):
 				# 	break
 				# else:
 				# 	codeV = v
-			# if key == "resource/assets/movie/monster/monster10028_3r.png":
+			# if key == "resource/assets/atlas2_ui/cm/cm.png":
 			# 	print("=============================" + str(codeV))
-			newDict[key] = codeV
+			if codeV == CODE_BASE:
+				# print("base version " + key)
+				pass
+			else:
+				newDict[key] = codeV
 	# for key in maxMd5:
 	# 	codeV = version
 	# 	for data in versionMd5:
@@ -261,10 +276,12 @@ def GenVersionCodeFile(root, version):
 					tempDict = tempDict[value]
 
 
-	maxCode = GenMaxCodeFile(root) + 1
-	print(maxCode)
-	# json.dump(simpleDict, file("f:/test.json", "w"))
-	json.dump(simpleDict, file(os.path.join(root, GetCodeFileName(maxCode)), "w"))
+	verFileDir = os.path.join(root, "ver_dir")
+	maxCode = GenMaxCodeFile(verFileDir) + 1
+	Util.CheckDir(verFileDir)
+	# 写入基础号
+	simpleDict[BASE_VER_KEY_NAME] = CODE_BASE
+	json.dump(simpleDict, file(os.path.join(verFileDir, GetCodeFileName(maxCode)), "w"))
 	# json.dump(newDict, file(os.path.join(root, GetCodeFileName(maxCode)), "w"))
 	# print(newDict)	
 	# for v in array:
@@ -272,41 +289,43 @@ def GenVersionCodeFile(root, version):
 def CheckDir(dir):
 	if not os.path.exists(dir):
 		os.makedirs(dir)
-		
+
+# 拷贝新版本文件到临时目录		
 def UpNewVersionFile(root, version):
 	newDir = os.path.join(root, "temp_upload")
-	if os.path.exists(newDir):
-		shutil.rmtree(newDir)
+	Util.ClearAndCheckDir(newDir)
 	
-	codeFileName = GetCodeFileName(GenMaxCodeFile(root))
-	p = os.path.join(root, codeFileName)
+	verFileDir = os.path.join(root, "ver_dir")
+	codeFileName = GetCodeFileName(GenMaxCodeFile(verFileDir))
+	p = os.path.join(verFileDir, codeFileName)
 	if not os.path.exists(p):
 		print("[ERROR] UpNewVersionFile Not Exists => " + p)
 		return
 	print(version, p)
 	jsonDictObject = json.load(file(p, "r"))
-	jsonObject = {}
+	codeBase = jsonDictObject[BASE_VER_KEY_NAME]
+	del jsonDictObject[BASE_VER_KEY_NAME]
+	# 基础文件版本
+	jsonObject = json.load(file(os.path.join(root, str(codeBase), VERSION_FILE_NAME), "r"))
+	for key in jsonObject:
+		jsonObject[key] = codeBase
+	# 获取版本文件
 	def readAllKey(prefix, dict):
 		allDict = {}
 		for key in dict:
 			v = dict[key]
 			if isinstance(v, int):
-				# 根节点或者有版本的才需要写入配置
-				# if prefix == "" or v != 1:
-					allDict[prefix + key] = v
+				allDict[prefix + key] = v
 			else:
 				temp = readAllKey(prefix + key + "/", v)
 				for key in temp:
 					allDict[key] = temp[key]
 		return allDict
-
-	
-
-	jsonObject = readAllKey("", jsonDictObject)
-
-
-	# print(jsonObject)
-	# exit()
+	# 写入新的配置
+	newJsonObject = readAllKey("", jsonDictObject)
+	for key in newJsonObject:
+		jsonObject[key] = newJsonObject[key]
+	# 提取文件
 	for key in jsonObject:
 		v = jsonObject[key]
 		# print(v , version)
@@ -326,3 +345,25 @@ def UpNewVersionFile(root, version):
 	newPath = os.path.join(newDir, codeFileName)
 	CheckDir(os.path.dirname(newPath))
 	shutil.copy(p, newPath)
+	UpdateFileName(newDir, version)
+
+# 更新资源文件名称
+def UpdateFileName(dir, version):
+	Log.Info("更新文件版本号 => " + dir + "; " + str(version))
+	for root, dirs, files in os.walk(dir):
+		for fileName in files:
+			array = fileName.split(".")
+			if fileName.startswith(VER_NAME) and filename.endswith(".json"):
+				suffix = "_{0}.{2}".format(GAME_ID, ".".join(array[1:]))
+			else:
+				suffix = "_{0}_{1}.{2}".format(GAME_ID, version, ".".join(array[1:]))
+			if fileName.endswith(suffix):
+				Log.Info("已经更新 => " + fileName)
+				continue
+			newFileName = array[0] + suffix
+			fPath = os.path.join(root, fileName)
+			newFilePath = os.path.join(root, newFileName)
+			os.rename(fPath, newFilePath)
+		
+
+

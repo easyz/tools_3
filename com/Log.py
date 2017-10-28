@@ -6,5 +6,8 @@ def Info(s):
     else:
         print(s)
 
+def RawInput(s):
+    return raw_input(s.decode("utf8").encode("gbk"))
+
 if __name__ == "__main__":
     Info("测试")

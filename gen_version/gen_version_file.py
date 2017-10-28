@@ -66,23 +66,44 @@ def ParserSliceData(keyName, jsonData):
 # 解析九宫格json数据
 def ParserSliceArea(path):
 	jsonData = json.load(file(path))
+	imageName = jsonData["meta"]["image"]
+	oldFrames = jsonData["frames"]
+	newFrames = {}
+	for frameData in oldFrames:
+		temp = {}
+		newFrames[frameData["filename"].split(".")[0]] = temp
+		temp["x"] = frameData["frame"]["x"]
+		temp["y"] = frameData["frame"]["y"]
+		temp["w"] =  frameData["frame"]["w"]
+		temp["h"] = frameData["frame"]["h"]
+		temp["offX"] = frameData["spriteSourceSize"]["x"]
+		temp["offY"] = frameData["spriteSourceSize"]["y"]
+		temp["sourceW"] = frameData["sourceSize"]["w"]
+		temp["sourceH"] = frameData["sourceSize"]["h"]
+	jsonData = {}
+	jsonData["file"] = imageName
+	jsonData["frames"] = newFrames
+
 	frames = jsonData["frames"]
 	hasSlice = 0
 	for name in frames:
 		if ParserSliceData(name, frames[name]):
 			hasSlice = hasSlice + 1
-	if hasSlice > 0:
-		json.dump(jsonData, file(path, "w"))
+	# if hasSlice > 0:
+	# 	json.dump(jsonData, file(path, "w"))
+	# 重写配置
+	json.dump(jsonData, file(path, "w"))
 
-def PackSingleAtals(root, dir, outDir):
+def PackSingleAtals(root, filedir, outDir):
 	CheckDir(outDir)
-	dir = os.path.join(root, dir)
+	dir = os.path.join(root, filedir)
 	if not os.path.isdir(dir):
 		print(dir + " not dir!!!")
 		return
 	dirName = dir.split("\\")[-1]
-	exePath = os.path.join(WORK, "libs\\texture_merger\\TextureMerger.exe")
+	exePath = os.path.join(WORK, "libs\\texturepack\\bin\\TexturePacker.exe")
 	packImgList = []
+	fullPackImgList = []
 	imgList = []
 	for fileName in os.listdir(dir):
 		filePath = os.path.join(dir, fileName)
@@ -98,17 +119,32 @@ def PackSingleAtals(root, dir, outDir):
 			imgList.append(filePath)
 			print("ignore image ", filePath, image.size)
 			continue
-		packImgList.append(filePath)
+		packImgList.append(fileName)
+		fullPackImgList.append(os.path.join(filedir, fileName))
+		# packImgList.append(fileName)
 	CheckDir(dir.replace(root, outDir))
-	if len(packImgList) == 1:
-		imgList.append(packImgList[0])
-		packImgList = []
-	if len(packImgList) > 0:
+	if len(fullPackImgList) == 1:
+		imgList.append(fullPackImgList[0])
+		fullPackImgList = []
+	if len(fullPackImgList) > 0:
 		# 打包图集
 		jsonPath = os.path.join(dir.replace(root, outDir), dirName + ".json")
-		command = "{0} -p {1} -o {2}".format(exePath, " ".join(packImgList), jsonPath)
+		pngPath = os.path.join(dir.replace(root, outDir), dirName + ".png")
+		argsArray = [
+			"--disable-rotation",
+			"--size-constraints AnySize",
+			"--max-width 2048",
+			"--max-height 2048",
+			"--format json-array",
+		]
+		command = exePath + " {0} --data {1} --sheet {2} {3}".format(" ".join(argsArray), jsonPath, pngPath, " ".join(packImgList))
+		# print(command)
+		curDir = os.getcwd()
+		os.chdir(filedir)
 		os.system(command)	
+		os.chdir(curDir)
 		ParserSliceArea(jsonPath)
+		# os.chdir(curDir)
 	for file in imgList:
 		shutil.copy2(file, file.replace(root, outDir))
 
@@ -188,3 +224,13 @@ def ResetAtalsConfig(root, prefixRoot, prefix, outDir):
 
 def CompressAtals(outCheckDir):
 	com.CompressOrigen(outCheckDir)
+
+if __name__ == "__main__":
+	# path = "F:\\web\\temp_upload\\1\\release\\1\\resource\\assets\\atlas2_ui\\cm\\cm_2_1.json"
+	# jsonObject = json.load(file(path, "r"))
+	# frames = jsonObject["frames"]
+	# for name in frames:
+	# 	if ParserSliceData(name, frames[name]):
+	# 		print(name)
+	# print(jsonObject)
+	pass

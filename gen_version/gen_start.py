@@ -8,10 +8,6 @@ import shutil
 import os
 import json
 
-# outDir = "E:\\test_pack_atlas"
-# projectDir = "E:\\lycq\\client\\project"
-
-
 def Start(outDir, projectDir, version, root):
     print("gen_start!!!")
     # 版本路径
@@ -30,7 +26,7 @@ def Start(outDir, projectDir, version, root):
     step = [
         # STEP00,
 
-        STEP01,
+        # STEP01,
 
         # STEP02,
         # STEP02_02,
@@ -40,8 +36,8 @@ def Start(outDir, projectDir, version, root):
 
         # STEP05,
 
-        STEP04,
-        STEP06,
+        # STEP04,
+        # STEP06,
         STEP07,
 
     ]
@@ -68,16 +64,14 @@ def Start(outDir, projectDir, version, root):
         print("===> STEP01")
         copyPath = [
             "resource\\cfg",
+            "resource\\assets\\image\\img",
+            "resource\\assets\\movie\\hero",
+            "resource\\assets\\image\\other",
+            "resource\\assets\\map",
+            "resource\\sound",
 
-            # "resource\\assets\\image\\img",
-            # "resource\\assets\\image\\other",
-
-            # "resource\\assets\\atlas_ui",
-
-            # "resource\\assets\\map",
-
-            # "resource\\assets\\movie\\blood",
-            # "resource\\image\\public",
+            "resource\\assets\\atlas_ui",
+            "resource\\assets\\movie\\blood",
         ]
 
         for path in copyPath:
@@ -110,14 +104,12 @@ def Start(outDir, projectDir, version, root):
 
             "resource\\assets\\movie\\body",
             "resource\\assets\\movie\\monster",
-            # "resource\\assets\\movie\\skillEff",
+            "resource\\assets\\movie\\skillEff",
             "resource\\assets\\movie\\uiEffe",
             "resource\\assets\\movie\\weapon",
             "resource\\assets\\movie\\wing",
 
-            # "resource\\assets\\movie\\eff",
-            # "resource\\assets\\movie\\warspirit",
-            # "resource\\assets\\movie\\footstep",
+            "resource\\assets\\movie\\eff",
         ]
         for path in compressPath2:
             com.Compress(projectDir, path, outDir, True)
