@@ -12,6 +12,9 @@ def copyFiles(sourceDir, targetDir, cover = True):
     global copyFileCounts
     # print sourceDir
     # print u"%s 当前处理文件夹%s已处理%s 个文件" %(time.strftime('%Y-%m-%d %H:%M:%S',time.localtime(time.time())), sourceDir,copyFileCounts)   
+    if not os.path.exists(sourceDir):
+        print("not found source dir => " + sourceDir)
+        return
     for f in os.listdir(sourceDir):
         sourceF = os.path.join(sourceDir, f)
         targetF = os.path.join(targetDir, f)

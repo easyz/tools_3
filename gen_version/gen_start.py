@@ -24,7 +24,7 @@ def Start(outDir, projectDir, version, root):
     STEP07 = "新版本文件"
 
     step = [
-        # STEP00,
+        STEP00,
 
         # STEP01,
 
@@ -36,8 +36,8 @@ def Start(outDir, projectDir, version, root):
 
         # STEP05,
 
-        # STEP04,
-        # STEP06,
+        STEP04,
+        STEP06,
         STEP07,
 
     ]

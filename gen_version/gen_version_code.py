@@ -353,8 +353,8 @@ def UpdateFileName(dir, version):
 	for root, dirs, files in os.walk(dir):
 		for fileName in files:
 			array = fileName.split(".")
-			if fileName.startswith(VER_NAME) and filename.endswith(".json"):
-				suffix = "_{0}.{2}".format(GAME_ID, ".".join(array[1:]))
+			if fileName.startswith(VER_NAME) and fileName.endswith(".json"):
+				suffix = "_{0}.{1}".format(GAME_ID, ".".join(array[1:]))
 			else:
 				suffix = "_{0}_{1}.{2}".format(GAME_ID, version, ".".join(array[1:]))
 			if fileName.endswith(suffix):
