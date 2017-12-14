@@ -13,6 +13,7 @@ pngquant2Path = os.path.join(WORK, "libs\\pngquant\\pngquant.exe -f --ext .png -
 # def GetConfigFile(filePath):
 #     if filePath.endswith(".png")
 
+# 拷贝压缩
 def Compress(root, imageDir, outdir):
     pngFile = []
     copyFile = []

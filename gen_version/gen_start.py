@@ -24,19 +24,17 @@ def Start(outDir, projectDir, version, root):
     step = [
         STEP00,
 
-        STEP01,
+        # STEP01,
 
         # STEP02,
-        # STEP02_02,
 
-        # STEP03_01,
-        # STEP03_02,
+        # STEP03,
 
         # STEP05,
 
-        STEP04,
-        STEP06,
-        STEP07,
+        # STEP04,
+        # STEP06,
+        # STEP07,
 
     ]
 
@@ -77,9 +75,10 @@ def Start(outDir, projectDir, version, root):
     # 2、打包图集
     if index(STEP02):
         print("===> STEP02")
-        gen.PackAtals(projectDir, outDir, "resource\\assets\\atlas_ui")
-        gen.ResetAtalsConfig(projectDir, "resource", "assets/atlas_ui", outDir)
-        gen.CompressAtals(os.path.join(outDir, "resource\\assets\\atlas_ui"))
+        atlasDir = "resource\\assets\\atlas_ui"
+        gen.PackAtals(projectDir, outDir, atlasDir)
+        gen.GenAtalsConfig(os.path.join(projectDir, "resource\\default.res.json"), os.path.join(outDir, atlasDir), os.path.join(outDir, "resource"))
+        gen.CompressAtals(os.path.join(outDir, atlasDir))
 
     # 3、压缩资源
     if index(STEP03):

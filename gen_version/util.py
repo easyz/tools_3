@@ -64,7 +64,7 @@ def BuildScript(projectDir, outDir):
     propFile.close()
     print("modify egretProperties.json")
     jsonData = json.load(file(propPath, "r"))
-    jsonData["resources"] = ["resource\\eui_skins", "resource\\skins", "resource\\skins_ui", "resource\\default.thm.json"]
+    jsonData["resources"] = ["resource\\skins", "resource\\default.thm.json"]
     json.dump(jsonData, file(propPath, "w"))
     # publish
     os.system("egret publish " + projectDir + " --version temp_version_folder")
@@ -73,18 +73,18 @@ def BuildScript(projectDir, outDir):
     file(propPath, "w").write(oldContent)
 
     oldDir = os.path.join(projectDir, "bin-release\\web\\temp_version_folder")
-    copyDir = [
-        "libs",
-        "polyfill",
-    ]
+    # copyDir = [
+    #     "libs",
+    #     "polyfill",
+    # ]
     copyFileArray = [
         "resource\\default.thm.json",
         # "favicon.ico",
         "main.min.js",
         # "index.html",
     ]
-    for dir in copyDir:
-        copyFiles(os.path.join(oldDir, dir), os.path.join(outDir, dir))
+    # for dir in copyDir:
+    #     copyFiles(os.path.join(oldDir, dir), os.path.join(outDir, dir))
     for filePath in copyFileArray:
         CopyFile(os.path.join(oldDir, filePath), os.path.join(outDir, filePath))
 

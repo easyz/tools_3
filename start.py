@@ -19,7 +19,7 @@ Log.Info("当前版本号 => " + str(curVersion))
 
 versionDir = os.path.join(outDir, str(curVersion))
 if not os.path.exists(versionDir):
-    Log.Info("not version dir!!!", versionDir)
+    Log.Info("not version dir!!! " + versionDir)
     exit()
 
 gen_start.Start(versionDir, projectDir, curVersion, outDir)

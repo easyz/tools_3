@@ -24,7 +24,7 @@ elif PLA == "neigou":
     CODE_DIR_VERSION = "1"
     # 基础版本号
     CODE_BASE = 1
-elif PLA = "langyabang":
+elif PLA == "langyabang":
     outDir = "F:\\game\\game4\\release"
     projectDir = "D:\\develop\\lyb\\client\\project"
 
