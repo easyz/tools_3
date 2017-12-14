@@ -7,8 +7,8 @@ import os
 # outDir = "F:\\Test\\res\\skins\\"
 # checkDir = "D:\\SourceTree\\egret_project\\egret_project\\client\\project\\resource\\skins\\"
 
-outDir = "F:\\test\\altas_ui\\"
-checkDir = "E:\\lycq\\client\\project\\resource\\image\\"
+outDir = "F:\\test2\\"
+checkDir = "F:\\test1\\"
 
 def VerifyDir(path):
 	if not os.path.exists(path):

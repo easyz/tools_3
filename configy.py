@@ -2,7 +2,7 @@
 
 import com.Log as Log
 
-PLA = "neigou"
+PLA = "langyabang"
 
 if PLA == "fj3":
     outDir = "F:\\game\\game2\\release"
@@ -20,6 +20,16 @@ elif PLA == "neigou":
 
     # 游戏id
     GAME_ID = "3"
+    # 游戏目录版本号
+    CODE_DIR_VERSION = "1"
+    # 基础版本号
+    CODE_BASE = 1
+elif PLA = "langyabang":
+    outDir = "F:\\game\\game4\\release"
+    projectDir = "D:\\develop\\lyb\\client\\project"
+
+    # 游戏id
+    GAME_ID = "4"
     # 游戏目录版本号
     CODE_DIR_VERSION = "1"
     # 基础版本号

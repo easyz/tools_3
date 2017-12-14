@@ -6,6 +6,10 @@ import hashlib
 import json
 import PIL.Image as Image
 import util
+
+sys.path.append(os.path.dirname(__file__) + "/../")
+
+from com.AtlasUtil import *
 import compress_img as com
 
 WORK = os.path.dirname(__file__)
@@ -157,25 +161,13 @@ def CopyImg(root, dir, outDir):
 			# print(path, newPath)
 			shutil.copy2(path, newPath)
 
-def PackAtals(root, dir, outDir):
-	# if os.path.exists(outDir):
-	# 	shutil.rmtree(outDir)
-	CheckDir(outDir)
-	dir = os.path.join(root, dir)
-	imgList = []
-	for child in os.listdir(dir):
-		path = os.path.join(dir, child)
-		# 忽略的目录
-		# if child == "garbage":
-		# 	continue
-		# 不需要打包的目录
-		if child == "image" or child == "garbage":
-			CopyImg(root, path, outDir)
-		else:
-			# pass
-			if os.path.isdir(path):
-				# print(root, os.path.join(dir, child))
-				PackSingleAtals(root, os.path.join(dir, child), outDir)
+def PackAtals(root, outRoot, atlasDir):
+	folderPath = os.path.join(root, atlasDir)
+	outFolderPath = os.path.join(outRoot, atlasDir)
+	for parent,dirnames,filenames in os.walk(folderPath):
+        for dirName in dirnames:
+            dirPath = os.path.join(parent, dirName).replace(folderPath, "")[1:]
+            PackSingleAtals(folderPath, dirPath, outFolderPath)
 
 # 重新设置图集的配置
 def ResetAtalsConfig(root, prefixRoot, prefix, outDir):

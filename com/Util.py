@@ -37,3 +37,11 @@ def ClearDir(dir):
 def ClearAndCheckDir(dir):
     CheckDir(dir)
     ClearDir(dir)
+
+def GetFileName(path):
+    path = path.split(".")[0]
+    index01 = path.rfind("/")
+    index02 = path.rfind("\\")
+    name01 = index01 != -1 and path[(index01 + 1):] or path
+    name02 = index02 != -1 and path[(index02 + 1):] or path
+    return len(name01) < len(name02) and name01 or name02

@@ -15,9 +15,7 @@ def Start(outDir, projectDir, version, root):
     STEP00 = "编译代码"
     STEP01 = "拷贝资源"
     STEP02 = "打包图集"
-    STEP02_02 = "压缩图集"
-    STEP03_01 = "压缩图片01"
-    STEP03_02 = "压缩图片02"
+    STEP03 = "压缩图片"
     STEP04 = "生成版本MD5文件"
     STEP05 = "合并库文件"
     STEP06 = "生成版本号文件"
@@ -26,7 +24,7 @@ def Start(outDir, projectDir, version, root):
     step = [
         STEP00,
 
-        # STEP01,
+        STEP01,
 
         # STEP02,
         # STEP02_02,
@@ -64,14 +62,12 @@ def Start(outDir, projectDir, version, root):
         print("===> STEP01")
         copyPath = [
             "resource\\cfg",
+            "resource\\sound",
+            "resource\\assets\\game_start",
+
             "resource\\assets\\image\\img",
-            "resource\\assets\\movie\\hero",
             "resource\\assets\\image\\other",
             "resource\\assets\\map",
-            "resource\\sound",
-
-            "resource\\assets\\atlas_ui",
-            "resource\\assets\\movie\\blood",
         ]
 
         for path in copyPath:
@@ -81,38 +77,29 @@ def Start(outDir, projectDir, version, root):
     # 2、打包图集
     if index(STEP02):
         print("===> STEP02")
-        gen.PackAtals(projectDir, "resource\\assets\\atlas2_ui", outDir)
-        gen.ResetAtalsConfig(projectDir, "resource", "assets/atlas2_ui", outDir)
-
-    if index(STEP02_02):
-        print("===> STEP02_02")
-        gen.CompressAtals(os.path.join(outDir, "resource\\assets\\atlas2_ui"))
+        gen.PackAtals(projectDir, outDir, "resource\\assets\\atlas_ui")
+        gen.ResetAtalsConfig(projectDir, "resource", "assets/atlas_ui", outDir)
+        gen.CompressAtals(os.path.join(outDir, "resource\\assets\\atlas_ui"))
 
     # 3、压缩资源
-    if index(STEP03_01):
-        print("===> STEP03_01")
+    if index(STEP03):
+        print("===> STEP03")
         compressPath = [
-            "resource\\assets\\image\\item_single",
-        ]
-        for path in compressPath:
-            com.Compress(projectDir, path, outDir)
-
-    if index(STEP03_02):
-        print("===> STEP03_02")
-        compressPath2 = [
             "resource\\assets\\atlas_font",
+            "resource\\assets\\image\\item_single",
+            "resource\\assets\\image\\vipicon",
 
             "resource\\assets\\movie\\body",
+            "resource\\assets\\movie\\mon_show",
             "resource\\assets\\movie\\monster",
+            "resource\\assets\\movie\\role_show",
             "resource\\assets\\movie\\skillEff",
             "resource\\assets\\movie\\uiEffe",
             "resource\\assets\\movie\\weapon",
             "resource\\assets\\movie\\wing",
-
-            "resource\\assets\\movie\\eff",
         ]
-        for path in compressPath2:
-            com.Compress(projectDir, path, outDir, True)
+        for path in compressPath:
+            com.Compress(projectDir, path, outDir)
 
     if index(STEP04):
         print("===> STEP04")

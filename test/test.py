@@ -75,4 +75,7 @@ def TestFunc():
     #             json.dump(jsonObject, file(path, "w"))
     #             print(path)
 
-TestFunc()
+# TestFunc()
+
+
+# print "_".join("sdfsdf\\asdfsdfxxx".split("\\")) 
