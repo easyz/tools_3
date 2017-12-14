@@ -24,11 +24,11 @@ def Start(outDir, projectDir, version, root):
     step = [
         STEP00,
 
-        # STEP01,
+        STEP01,
 
-        # STEP02,
+        STEP02,
 
-        # STEP03,
+        STEP03,
 
         # STEP05,
 
