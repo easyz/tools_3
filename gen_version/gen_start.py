@@ -30,11 +30,9 @@ def Start(outDir, projectDir, version, root):
 
         STEP03,
 
-        # STEP05,
-
-        # STEP04,
-        # STEP06,
-        # STEP07,
+        STEP04,
+        STEP06,
+        STEP07,
 
     ]
 
@@ -66,6 +64,15 @@ def Start(outDir, projectDir, version, root):
             "resource\\assets\\image\\img",
             "resource\\assets\\image\\other",
             "resource\\assets\\map",
+            
+            "resource\\assets\\movie\\body",
+            "resource\\assets\\movie\\mon_show",
+            "resource\\assets\\movie\\monster",
+            "resource\\assets\\movie\\role_show",
+            "resource\\assets\\movie\\skillEff",
+            "resource\\assets\\movie\\uiEffe",
+            "resource\\assets\\movie\\weapon",
+            "resource\\assets\\movie\\wing",
         ]
 
         for path in copyPath:
@@ -87,15 +94,6 @@ def Start(outDir, projectDir, version, root):
             "resource\\assets\\atlas_font",
             "resource\\assets\\image\\item_single",
             "resource\\assets\\image\\vipicon",
-
-            "resource\\assets\\movie\\body",
-            "resource\\assets\\movie\\mon_show",
-            "resource\\assets\\movie\\monster",
-            "resource\\assets\\movie\\role_show",
-            "resource\\assets\\movie\\skillEff",
-            "resource\\assets\\movie\\uiEffe",
-            "resource\\assets\\movie\\weapon",
-            "resource\\assets\\movie\\wing",
         ]
         for path in compressPath:
             com.Compress(projectDir, path, outDir)
