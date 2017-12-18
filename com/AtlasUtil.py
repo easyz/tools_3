@@ -123,6 +123,15 @@ def ResetAtalsConfig(resjsonPath, deletePrefix, checkDir, prefix, outDir):
 				for sheetKey in frameJsonData["frames"]:
 					sheetArray.append(sheetKey)
 				typeData["subkeys"] = ",".join(sheetArray)
+			elif fileType == "image":
+				if typeData["name"].find("@") != -1:
+					im = Image.open(realFilePath)
+					returnData = ParserSliceData2(typeData["name"], im.width, im.height)
+					im.close()
+					if returnData[0]:
+						typeData["name"] = returnData[1]
+						typeData["scale9grid"] = returnData[2]
+
 			newResJsonData.append(typeData)
 
 	jsonData["resources"] = newResJsonData
@@ -161,9 +170,17 @@ def ParserSliceArea(path):
 
 # 解析九宫格数据
 def ParserSliceData(keyName, jsonData):
+	returnData = ParserSliceData2(keyName, jsonData["sourceW"], jsonData["sourceH"])
+	if returnData[0]:
+		jsonData["scale9grid"] = returnData[2]
+	return returnData[1]
+
+
+def ParserSliceData2(keyName, width, height):
+	returnData = [False, keyName, None]
 	names = keyName.split("@")
 	if len(names) < 2:
-		return keyName
+		return returnData
 	for name in names:
 		array = name.split("_")
 		if len(array) > 0:
@@ -183,10 +200,13 @@ def ParserSliceData(keyName, jsonData):
 
 				x = left
 				y = top
-				width = jsonData["sourceW"] - right - left
-				height = jsonData["sourceH"] - bottom - top
+				width = width - right - left
+				height = height - bottom - top
 
-				jsonData["scale9grid"] = "{0},{1},{2},{3}".format(x, y, width, height)
 				print("scale9grid => " + keyName)
-				return names[0]
-	return keyName
+				returnData[0] = True
+				returnData[1] = names[0]
+				returnData[2] = "{0},{1},{2},{3}".format(x, y, width, height)
+				return returnData
+	return returnData
+

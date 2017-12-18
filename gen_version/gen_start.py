@@ -58,21 +58,22 @@ def Start(outDir, projectDir, version, root):
         print("===> STEP01")
         copyPath = [
             "resource\\cfg",
-            "resource\\sound",
-            "resource\\assets\\game_start",
 
-            "resource\\assets\\image\\img",
-            "resource\\assets\\image\\other",
-            "resource\\assets\\map",
+            # "resource\\sound",
+            # "resource\\assets\\game_start",
+
+            # "resource\\assets\\image\\img",
+            # "resource\\assets\\image\\other",
+            # "resource\\assets\\map",
             
-            "resource\\assets\\movie\\body",
-            "resource\\assets\\movie\\mon_show",
-            "resource\\assets\\movie\\monster",
-            "resource\\assets\\movie\\role_show",
-            "resource\\assets\\movie\\skillEff",
-            "resource\\assets\\movie\\uiEffe",
-            "resource\\assets\\movie\\weapon",
-            "resource\\assets\\movie\\wing",
+            # "resource\\assets\\movie\\body",
+            # "resource\\assets\\movie\\mon_show",
+            # "resource\\assets\\movie\\monster",
+            # "resource\\assets\\movie\\role_show",
+            # "resource\\assets\\movie\\skillEff",
+            # "resource\\assets\\movie\\uiEffe",
+            # "resource\\assets\\movie\\weapon",
+            # "resource\\assets\\movie\\wing",
         ]
 
         for path in copyPath:

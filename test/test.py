@@ -1,7 +1,7 @@
 import os
 import json
 import shutil
-
+import PIL.Image as Image
 # def GetAllImg(fileDir, prefix):
 #     imgList = []
 #     for fileDir, sub, fileList in os.walk(fileDir):
@@ -79,3 +79,13 @@ def TestFunc():
 
 
 # print "_".join("sdfsdf\\asdfsdfxxx".split("\\")) 
+
+typeData = {"name": "ui_cm_p_gxhd@112_122_212_36"}
+realFilePath = "D:\\develop\\lyb\\assets\\dev\\atlas_ui\\cm\\ui_cm_p_gxhd@112_122_212_36.png"
+if typeData["name"].find("@") != -1:
+    # print("------------")
+    im = Image.open(realFilePath)
+    im.close()
+    print(im.width)
+    print(im.height)
+    print(im)
