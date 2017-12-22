@@ -69,10 +69,10 @@ def Start(outDir, projectDir, version, root):
             # "resource\\assets\\movie\\body",
             # "resource\\assets\\movie\\mon_show",
             # "resource\\assets\\movie\\monster",
-            # "resource\\assets\\movie\\role_show",
+            "resource\\assets\\movie\\role_show",
             # "resource\\assets\\movie\\skillEff",
             # "resource\\assets\\movie\\uiEffe",
-            # "resource\\assets\\movie\\weapon",
+            "resource\\assets\\movie\\weapon",
             # "resource\\assets\\movie\\wing",
         ]
 
