@@ -17,7 +17,6 @@ def Start(outDir, projectDir, version, root):
     STEP02 = "打包图集"
     STEP03 = "压缩图片"
     STEP04 = "生成版本MD5文件"
-    STEP05 = "合并库文件"
     STEP06 = "生成版本号文件"
     STEP07 = "新版本文件"
 
@@ -26,9 +25,9 @@ def Start(outDir, projectDir, version, root):
 
         STEP01,
 
-        STEP02,
+        # STEP02,
 
-        STEP03,
+        # STEP03,
 
         STEP04,
         STEP06,
@@ -69,11 +68,15 @@ def Start(outDir, projectDir, version, root):
             # "resource\\assets\\movie\\body",
             # "resource\\assets\\movie\\mon_show",
             # "resource\\assets\\movie\\monster",
-            "resource\\assets\\movie\\role_show",
+            # "resource\\assets\\movie\\role_show",
             # "resource\\assets\\movie\\skillEff",
             # "resource\\assets\\movie\\uiEffe",
-            "resource\\assets\\movie\\weapon",
+            # "resource\\assets\\movie\\weapon",
             # "resource\\assets\\movie\\wing",
+            # "resource\\assets\\movie\\hero_show",
+            # "resource\\assets\\movie\\hero",
+            # "resource\\assets\\movie\\pet",
+            # "resource\\assets\\movie\\sceneEff",
         ]
 
         for path in copyPath:
@@ -94,7 +97,7 @@ def Start(outDir, projectDir, version, root):
         compressPath = [
             "resource\\assets\\atlas_font",
             "resource\\assets\\image\\item_single",
-            "resource\\assets\\image\\vipicon",
+            # "resource\\assets\\image\\vipicon",
         ]
         for path in compressPath:
             com.Compress(projectDir, path, outDir)
@@ -103,9 +106,9 @@ def Start(outDir, projectDir, version, root):
         print("===> STEP04")
         gen_code.Gen(outDir, version)
 
-    if index(STEP05):
-        print("===> STEP05")
-        util.MergerLib(outDir)
+    # if index(STEP05):
+    #     print("===> STEP05")
+    #     util.MergerLib(outDir)
 
     if index(STEP06):
         print("===> STEP06")

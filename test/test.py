@@ -2,6 +2,14 @@ import os
 import json
 import shutil
 import PIL.Image as Image
+def GetAllImg(fileDir):
+    imgList = []
+    for fileDir, sub, fileList in os.walk(fileDir):
+        for fileName in fileList:
+            if fileName.endswith("png"):
+                imgList.append(os.path.join(fileDir, fileName))
+    return imgList
+
 # def GetAllImg(fileDir, prefix):
 #     imgList = []
 #     for fileDir, sub, fileList in os.walk(fileDir):
@@ -80,12 +88,31 @@ def TestFunc():
 
 # print "_".join("sdfsdf\\asdfsdfxxx".split("\\")) 
 
-typeData = {"name": "ui_cm_p_gxhd@112_122_212_36"}
-realFilePath = "D:\\develop\\lyb\\assets\\dev\\atlas_ui\\cm\\ui_cm_p_gxhd@112_122_212_36.png"
-if typeData["name"].find("@") != -1:
-    # print("------------")
-    im = Image.open(realFilePath)
-    im.close()
-    print(im.width)
-    print(im.height)
-    print(im)
+# typeData = {"name": "ui_cm_p_gxhd@112_122_212_36"}
+# realFilePath = "D:\\develop\\lyb\\assets\\dev\\atlas_ui\\cm\\ui_cm_p_gxhd@112_122_212_36.png"
+# if typeData["name"].find("@") != -1:
+#     # print("------------")
+#     im = Image.open(realFilePath)
+#     im.close()
+#     print(im.width)
+#     print(im.height)
+#     print(im)
+
+if __name__ == "__main__":
+    # pass
+    allSize = 0
+    singleSize = []
+    allImageList = GetAllImg("D:\\develop\\lyb\\assets\\dev\\movie\\body")
+    # print(allImageList)
+    for filePath in allImageList:
+        im = Image.open(filePath)
+        fileSize = im.width * im.height * 8
+        allSize = allSize + fileSize
+        singleSize.append({"name": filePath, "size": fileSize})
+        im.close()
+    print(len(allImageList), str(allSize * 0.001 * 0.001) + " Mb")
+    def comp(x, y):
+        return y["size"] - x["size"]
+    singleSize.sort(comp)
+    # print(singleSize)
+    json.dump(singleSize, open("e:\\test.txt", "w"))
